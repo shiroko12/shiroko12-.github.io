@@ -1,67 +1,66 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的網頁</title>
+    <title>我的簡單網頁</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+            margin: 0;
+            padding: 20px;
             text-align: center;
         }
-        main {
-            margin: 20px 0;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
+        h1 {
+            color: #333;
         }
-        form {
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .image-container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #ccc;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
         }
         button {
-            padding: 10px;
-            background: #28a745;
+            padding: 10px 20px;
+            background-color: #007BFF;
             color: white;
             border: none;
-            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<header>
     <h1>歡迎來到我的網頁</h1>
-</header>
+    <p>這是一個展示基本功能的簡單網頁，使用了Flexbox進行排版。</p>
 
-<main>
-    <h2>關於我們</h2>
-    <p>崩鐵好玩。</p>
-    <img src="https://i.imgur.com/oZEnldQ.jpeg0" alt="示範圖片">
-    
-    <h2>聯絡我們</h2>
-    <form>
-        <label for="name">姓名:</label>
-        <input type="text" id="name" name="name" required>
+    <h2>圖片展示</h2>
+    <div class="image-container">
+        <img src="https://betabg.mofang.com.tw/admin/20201209/uploads/2021-10-07/images/244185753_138714738483993_17283884135.jpg" alt="圖片1">
+        <img src="https://i.imgur.com/oZEnldQ.jpeg" alt="圖片2">
+        <img src="https://i.imgur.com/oZEnldQ.jpeg" alt="圖片3">
+    </div>
 
-        <label for="email">電子郵件:</label>
-        <input type="email" id="email" name="email" required>
+    <p>這是三張示例圖片，它們被均勻地分散並置中顯示。</p>
 
-        <label for="message">留言:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+    <button onclick="alert('按鈕已被點擊！')">點擊我</button>
 
-        <b
-
+</body>
+</html>
